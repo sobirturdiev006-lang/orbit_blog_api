@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import About, About_skill, Category, Portfolio, Services, Workex, Education, Hapclients, BlogPost, Contact
+from .models import About, About_skill, Category, Portfolio, Services, Workex, Education, Awards, Hapclients, BlogPost, Contact
 
 
 class AboutSerializer(serializers.ModelSerializer):
@@ -31,6 +31,11 @@ class EducationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Education
         fields = ('title', 'graduated_place', 'studied_years')
+
+class AwardsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Awards
+        fields = ('title', 'description', 'organization', 'year', 'is_published')
 
 class HapclientsSerializer(serializers.ModelSerializer):
     class Meta:

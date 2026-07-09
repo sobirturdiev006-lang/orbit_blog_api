@@ -70,6 +70,17 @@ class Education(models.Model):
     def __str__(self):
         return self.title
 
+
+class Awards(models.Model):
+    title = models.CharField(max_length=100)
+    organization = models.CharField(max_length=100)
+    year = models.CharField(max_length=30)
+    description = models.TextField()
+    is_published = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+
 class Hapclients(models.Model):
     image = models.ImageField(upload_to='images/hapclients/')
     title = models.CharField(max_length=200)

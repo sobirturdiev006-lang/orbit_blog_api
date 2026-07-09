@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, About_skill, Category, Portfolio, Workex, Education, Hapclients, Services, Contact
+from .models import About, About_skill, Category, Portfolio, Workex, Education, Awards, Hapclients, Services, Contact
 
 
 @admin.register(Contact)
@@ -14,6 +14,7 @@ admin.site.register(Category)
 admin.site.register(Portfolio)
 admin.site.register(Workex)
 admin.site.register(Education)
+admin.site.register(Awards)
 admin.site.register(Hapclients)
 admin.site.register(Services)
 # admin.site.register(Contact, ContactAdmin)
